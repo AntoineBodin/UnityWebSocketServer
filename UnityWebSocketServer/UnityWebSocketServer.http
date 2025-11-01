@@ -1,0 +1,6 @@
+@UnityWebSocketServer_HostAddress = http://localhost:5194
+
+GET {{UnityWebSocketServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
