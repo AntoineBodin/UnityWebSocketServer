@@ -60,7 +60,7 @@ namespace UnityWebSocketServer
                 var welcomeMsg = JsonSerializer.Serialize(new
                 {
                     type = "welcome",
-                    userId,
+                    clientId = userId,
                     users = existingUsers
                 });
 
