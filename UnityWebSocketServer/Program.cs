@@ -75,7 +75,7 @@ namespace UnityWebSocketServer
                 var joinedMsg = JsonSerializer.Serialize(new
                 {
                     type = "user-joined",
-                    userId
+                    clientId = userId
                 });
                 await Broadcast(roomId, joinedMsg, except: socket);
 
