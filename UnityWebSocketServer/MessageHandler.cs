@@ -40,7 +40,7 @@ namespace UnityWebSocketServer
             await SendAsync(socket, welcomeMsg);
         }
 
-        public async Task BroadcastMessageAsync(string roomId, BaseMessage message, WebSocket? except = null)
+        public async Task BroadcastMessageAsync(string roomId, object message, WebSocket? except = null)
         {
             var json = JsonSerializer.Serialize(message);
             await BroadcastRawAsync(roomId, json, except);
