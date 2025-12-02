@@ -46,7 +46,7 @@ namespace UnityWebSocketServer
             await BroadcastRawAsync(roomId, json, except);
         }
 
-        private async Task BroadcastRawAsync(string roomId, string message, WebSocket? except = null)
+        public async Task BroadcastRawAsync(string roomId, string message, WebSocket? except = null)
         {
             var bytes = Encoding.UTF8.GetBytes(message);
 

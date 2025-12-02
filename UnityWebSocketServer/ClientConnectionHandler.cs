@@ -155,7 +155,7 @@ namespace UnityWebSocketServer
             }
 
             // Broadcast other messages
-            await _messageHandler.BroadcastMessageAsync(roomId, baseMessage, except: socket);
+            await _messageHandler.BroadcastRawAsync(roomId, message, except: socket);
         }
 
         private async Task HandleWhoIsMessageAsync(WebSocket socket, string roomId, string message)
